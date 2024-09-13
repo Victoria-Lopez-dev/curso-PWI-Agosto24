@@ -1,0 +1,64 @@
+/*
+Hoy posicionamiento - display Flexbox Git y Github 
+*/
+h1{
+    background-color: yellowgreen;
+    width: 25%;
+    display: inline-block;
+    /* permite que solo ocupe el lugar necesario ,dejando disponible el espacio restante (ancho)*/
+}
+.subtitulo{
+    background-color: lightblue;
+    width: 400px;
+    display: inline-block;
+}
+#radio{
+    display: block;
+}
+
+.tarjeta{
+    border: 2px solid black;
+    width: 200px;
+    position: relative;
+   /* display: none ;  oculta a mi elemento sin ni siquiera dejar el lugar que ocupaba*/
+}
+.img-tarjeta{
+    width: 100%;
+}
+a{
+    background-color: pink;
+    
+}
+
+
+/*-------------------------------------*/
+
+
+
+/*
+Git sistema de versionado(https://git-scm.com/downloads)
+los comandos de git se manejan por medio de la terminal 
+
+GitHub es la plataforma remota 
+usuario de github
+
+carpetas - repositorios (repo)
+
+
+para ver carpetas ocultas en mac shift+command+.
+*/
+
+
+
+
+
+
+
+
+
+
+/*
+Para instalar git en Sistema Windows una vez descargado:
+https://youtu.be/jdXKwLNUfmg?si=d6Avvbbooh71Y6JQ
+
+*/

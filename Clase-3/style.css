@@ -1,0 +1,81 @@
+/*vamos a indicar todo el estilo del sitio*/
+/* Comentarios */
+/* Selectores -> hacer referencia a elementos del HTML */
+/*sintaxis*/
+
+/* 
+selector{
+    propiedad:valor;
+    propiedad:valor
+} 
+    
+tipos de selectores:
+-su etiqueta
+-clase
+-id
+*/
+/*por etiqueta -> todas las etiquetas de ese nombre que encuentre */
+body{
+    background-color: chocolate;
+}
+p{
+    color: rgb(200,30,100);
+    background-color: yellow;
+    width: 25%;
+}
+h1{
+    background-color: rgba(37, 91, 100, 0.8);
+    width:50% ;
+    height: 50vh;
+}
+
+img{
+    width: 400px;
+    
+}
+.img1{
+    opacity: 0.4;
+}
+div{
+    background-color: #ff769A;
+    width: 600px;
+}
+
+#parrafo{
+    width: 25vw;/* 25% del ancho de la pantalla/ventana */
+}
+/* por clase -> simbolo .nombreClase */
+
+.titular{
+    color: #ff769A;
+    
+}
+
+/*por id -> simbolo #nombreId */
+
+#boton1{
+    color: rgb(62, 37, 41);
+    background-color: #16325B;
+}
+
+/*
+colores primarios : rojo -verde -azul
+
+hexadecimal -> #+ 6 digitos : 0-9 A-F  
+transparencia le sumo 2 valores mas 00 -99
+rgba(transparencia) a -> 0-1 /rgb 0-255
+predeterminados de CSS
+
+width (ancho) - height(alto)
+
+unidades
+
+px-> unidades fijas 1200-1720px
+% -> 100% el tamaño de su padre
+vw(view width) vh(viewheight) ancho y alto de la ventana/pantalla
+toma como 100% el alto o ancho de ventana
+
+em rem
+
+*/
+/* tipografias - modelo de caja - position */

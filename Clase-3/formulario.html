@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./style.css">
+    <title>Clase -3</title>
+</head>
+<body>
+    <h1 class="grupo1 elemento">Formulario</h1>
+    <form action="/direccionAdondeEnviarElFormulario"><!-- atributo action indica a donde se va a enviar el formulario -->
+
+        <label for="nombre">Nombre</label><!-- informar al usuario que tiene que completar-->
+        <input type="text" id="nombre" name="Nombre"/><!-- informacion ingresada por el usuario, entrada de la informacion-->
+        <!-- Nombre: Juan-->
+        
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" name="apellido"/>
+
+        <label for="correo">email</label>
+        <input type="email" id="correo" name="email"/>
+
+        <label for="password">password</label>
+        <input type="password" id="password" name="password"/>
+
+
+        <label for="edad">Edad</label>
+        <input type="number">
+        <!-- checkbox (elegir multiples opciones ) -->
+        <label for="">Ingrese a que cursos se quiere anotar</label> 
+        <div>
+            <label for="pwi">PWI</label>
+            <input type="checkbox" id="pwi" value="progInicial" name="curso">
+
+            <label for="pwa">PWA</label>
+            <input type="checkbox" id="pwa" value="progAvanzada" name="curso">
+         </div>
+
+         <!--- radio (elegir una opcion entre varias)-->
+         <label for="">Indique en que turno </label>
+         <div>
+            <label for="dia">Mañana</label>
+            <input type="radio" id="dia" name="turno" value="manana">
+
+            <label for="noche">Noche</label>
+            <input type="radio" id="noche" name="turno" value="noche">
+
+         </div>
+
+            <label for="pais">indique su pais</label>
+            <select  id="pais" name="pais">
+                <option value="argentina">Argentina</option><!--input,options tienen el atributo 'value' que indica que valor tiene ese ingreso -->
+                <option value="peru">Peru</option>
+                <option value="colombia">Colombia</option>
+            </select>
+
+            <!-- dos opciones-->
+             <input type="submit" value="Enviar "><!-- boton de envio del formulario -->
+             <!-- alternativa al input de type submit -->
+              <!-- <button>Enviar</button> -->
+
+    </form>
+
+
+    <form ><!-- busqueda -->
+
+    </form>
+
+    <p class="grupo1" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, numquam! Excepturi ullam voluptatum eaque vel ipsa unde quibusdam fugiat assumenda nemo minima neque, veritatis, culpa ducimus quos. Cumque, placeat iure.</p>
+
+    <h3 class="elemento" id="tituloParticular">Otro titulo</h3>
+    <h3 id="titulo3">Otro titulo 2</h3>
+</body>
+</html>
+<!-- atributos : id - nombre unico en todo el documento HTML a una etiqueta
+ class  -> nombrar a varias etiquetas por el mismo nombre 
+ nombres no pueden iniciar con un numero
+-->

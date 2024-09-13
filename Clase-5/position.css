@@ -1,0 +1,93 @@
+/* 
+position se puede utilizar en cualquier elemento del body*/
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.padre{
+    background-color: lightblue;
+    padding-left: 20%;
+    position: relative;
+    height:1200px;
+}
+.cubo{
+    width: 200px;
+    height: 200px;
+    background-color: brown;
+    border: 2px solid orange; 
+    margin-bottom: 20px;
+    color: white;
+    font-size: 2rem;/* 16px por defecto (valor del html)*/
+}
+.static{
+    position: static;/* valor por defecto de todos los elementos  - no nos permite mover al elemento con bottom-top-left-right*/
+}
+.relative{
+    background-color: green;
+    position: relative;
+    /* toma como referencia el lugar que ocupa de manera inicial */
+    left:150px ;
+    bottom:100px ;
+    z-index: 2;
+} 
+.absolute{
+    background-color: violet;
+    position: absolute;
+    top: 10px; 
+    right: 150px;
+    /* toma como referencia la posicion del primer padre con position relative que encuentre, en caso que no lo encuentre, usa el body como referencia */
+    z-index: 1;
+}
+
+
+.fixed{
+    background-color: darkorange;
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    /* deja fijo en la pantalla al elemento en la posicion que le demos y toma como referencia al contorno de la pantalla*/
+    z-index: 0;
+}
+
+
+.sticky{
+    background-color: darkgoldenrod;
+    position: sticky;
+    top: 72px;
+   
+}   
+/* z-index -> numero entero que indica el orden en el que van a estar superpuestos los elementos 
+cuanto mas grande el numero , mas "por encima" va a esta */
+/*top(arriba) - bottom(abajo)- right(derecha) - left(izquierda)*/
+
+/*-------------*/
+
+.tarjeta{
+    border: 2px solid black;
+    width: 200px;
+    position: relative;
+   
+}
+img{
+    width: 100%;
+}
+h2{
+    position: absolute;
+    top: 20%;
+    left: 20px;
+    background-color: white;
+}
+#radio{
+    position: absolute;
+    top: 0;
+}
+
+/*-------------*/
+
+.navegacion{
+    background-color: pink;
+    width: 100%;
+    padding: 30px;
+    position: sticky;
+    top: 0;
+    z-index: 4;
+}

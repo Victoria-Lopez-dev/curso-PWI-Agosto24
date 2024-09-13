@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es"><!-- en -> english -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title >Clase -2 </title><!-- nombre pestaña-->
+    </head>
+    <body>
+        <!-- semanticas -->
+         <!-- titulares h1 - h2 - h3 -... h6  cada numero indica la importancia del titulo (no nos guiemos por como lo muestra por defecto el browser ya que con CSS eso lo podemos cambiar)
+         como buena practica 1 h1 por archivo HTML 
+         -->
+        <h1> 
+            Titular 
+        </h1>
+        <h2>HOLA soy un subtitulo</h2>
+        <h2>Subtitulo</h2>
+        <br>
+        <br><!-- mal uso del <br>-->
+        <h2>Subtitulo</h2>
+        <h3>Otro titulo mas </h3>
+       
+        <h2>Subtitulo</h2>
+        <!-- textos/parrafos -->
+         <p>
+           Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br> Fuga exercitationem excepturi eaque earum dolor aliquam assumenda, repellat odit adipisci quo saepe impedit nisi aliquid rerum quibusdam inventore possimus ab atque!
+        </p>
+        <hr></hr><!--linea horizontal -->
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non illum mollitia quibusdam quae quas repudiandae nam dolore rem accusantium ab hic, exercitationem sed doloremque quisquam molestias maxime? Atque, fuga corporis.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non illum mollitia quibusdam quae quas repudiandae nam dolore rem accusantium ab hic, exercitationem sed doloremque quisquam molestias maxime? Atque, fuga corporis.
+         </p>
+         <h2>Listas</h2>
+         <!--listas:  organizadas y  desorganizadas -->
+         <!-- items lista li (list item)-->
+         <!--ol (organizadas - organize list) -->
+         <ol>
+            <li>Un item</li>
+            <li>Otro Item</li>
+            <li>Item</li>
+         </ol>
+
+        <!--ul (desorganizadas - unorganize list) -->
+         <ul>
+            <li>Un item</li>
+            <li>Otro Item</li>
+            <li>Item</li>
+         </ul>
+         
+       <!--   <br> salto en linea (punto y aparte)-->
+        <!-- funcionales -->
+         <a href="https://www.google.com/" target="_blank"> Ir a google</a> <!-- anchor / ancla / "link"  vincular
+         necesita de href="" que nos permite vincular 
+         target="_blank" -> para que abra en una pestaña nueva -->
+
+         <a href="./hoja2.html">Ir a la hoja secundaria</a>
+
+         <a href="../Clase-1/App-Web.pdf">App Web</a>
+         <img src="../images/radio.png" alt="radio animada 3D"><!-- src -> fuente/ direccion donde se encuentra la imagen 
+         alt -> texto alternativo 
+         -->
+            <!-- <img src="../images/paisaje-niebla-matutina-montanas-globos-aerostaticos-al-amanecer.jpg" alt=""> -->
+       
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.218843463662!2d-58.422697287988726!3d-34.59862725711784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb2e1493a6a3%3A0x1862a7c0b8163e5d!2sUTN.BA!5e0!3m2!1ses-419!2sar!4v1725407850780!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/y_70M2GC3jw?si=yKBhgxlaPZfmAD3X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <video src="./videos/video2.mp4" ></video><!-- <audio> comparten mismos atributos:
+                src -> direccion en donde se encuentra
+                controls -> barra de reproduccion
+                loop/autoplay/muted -> atributos para modificar el funcionamiento
+                -->
+                <audio src="...." autoplay ></audio>
+
+            <button>Click</button>
+        
+           
+        <!-- estructurales :   <div> <span> etiquetas que me permiten agrupar ' cajas genericas' 
+            div -> nos permite definir tamaño en CSS
+            span -> ocupa el menor espacio posible
+            -->
+            <div>
+                <img src="../images/travel.png" alt="persona">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+
+            </div>
+            <!-- landmarks - etiquetas de maquetacion ? son grandes div que indican en su nombre el area del sitio-->
+    </body>
+</html>
+
+<!--  Comentario 
+ HTML -> Hyper Text Markup Lenguage - etiquetas 
+ <etiqueta></etiqueta> - apertura y cierre 
+ <etiquetas/> -cierre en si mismas 
+
+ atributos -> informacion agergada sobre la etiqueta se coloca dentro de la etiqueta de apertura 
+ estructura gral del HTML :  !+ enter | !+tab | html:5 +enter | html:5+tab
+ 
+ control+Z vuelvo para atras.Deshago lo ultimo escrito 
+ atajo para guardar : ctrl+S  | command+S
+ atajo : nombre de la etiqueta +enter|tab  nos escribe la etiqueta
+
+ alt+Z | option+Z -> para ajustar el documento a lo ancho
+
+ accesibilidad / screen readers (programas leer el HTMl y dictarselo al usuario)
+
+ ruteos:
+
+ ./ documentos o carpetas que se encuentran a la misma altura que mi documento
+
+ ../ salgo de la carpeta actual en la que estoiy
+-->
+ <!-- proxima clase
+  atributos - formularios - css
+ -->
