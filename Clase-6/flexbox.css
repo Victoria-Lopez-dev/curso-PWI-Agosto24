@@ -1,0 +1,67 @@
+*{
+    box-sizing: border-box;
+}
+h1{
+    background-color: pink;
+    text-align: center;
+    width: 200px;
+    
+}
+
+.padre{
+   /* padding: 0px 40px; */
+   /* width: 700px; */
+    background-color: darkolivegreen;
+    height: 80vh;
+    display: flex;/* me permite utilizar las propiedades de flexbox - sino no toma las propiedades de flexbox*/
+   /* flex-direction: column; me permite indicar si quiero que se comporte como fila o como columna(por defecto se comporta como fila )
+    fila -> row | columna->column*/
+    justify-content:center;
+    /* alinea|indico como se ubica de manera horizontal (row)
+    y de manera vertical cuando es column
+flex-end| flex-start| center |space-between | space-around |space-evenly */
+    align-items: center;/* alinea|ubica a los elementos de manera vertical (row) y de manera horizontal cuando es column
+    start | end | center | stretch */
+    flex-wrap: wrap;/* me permite indicarle si quiero que mantenga el ancho/alto de mis elementos hijos por sobre a que se comporten en una tira (sobre todo cuando se excede el tamaño de los hijos al padre*/
+    gap: 40px;/* distancia entre cada elemento hijo */
+}
+
+.tarjeta{
+    border: 2px solid cadetblue;
+    width: 200px;
+   /*height: fit-content; alto del contenido*/
+    background-color: aliceblue;
+    margin-top: 30px;
+    position: relative;
+}
+
+.dos{
+    background-color: darkorange;
+    align-self: flex-start;
+}
+.tarjeta>img{
+    width: 100%;
+}
+.titulo-tarjeta{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    color: white;
+    font-size: 30px;
+}
+/* flexbox -> indicamos al padre como se comportan los hijos (como se ubican) 
+ubica a los hijos en forma de tiras (horizontal,filas o vertical,columnas)
+
+justify-self
+align-self
+*/
+
+ul{
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    background-color: lightblue;
+    position: sticky;
+    top: 0;
+}
