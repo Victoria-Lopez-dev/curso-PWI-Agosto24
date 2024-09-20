@@ -1,0 +1,124 @@
+.contenedor{
+    width: 200px;
+    height: 300px;
+    border: 3px dotted darkslategray;
+    display: inline-block;
+}
+.figura{
+    width: 50px;
+    height: 50px;
+    background-color: brown;
+    /* animation: cambiosCubo 15s 3 alternate; */
+
+}
+button{
+    display: block;
+    animation-name: cambioColor;/* nombramos que animacion queremos aplicar*/
+    animation-duration: 5s;/* duracion de la animacion */
+    animation-iteration-count:3 ;/* cuantas veces repetimos la animacion (si quiero que lo haga de manera "eterna" puedo colocar el valor infinite */
+    animation-direction:alternate ;/*direccion de la animacion
+    alternate (ida y vuelta ) o reverse ( lo inicia de manera inversa */
+    animation-delay:2s ;/* demora el inicio de la animacion ->utiliza unidad de tiempo (s o ms)*/
+    animation-fill-mode: forwards;/* indicarle luego de finalizada la animacion si quiero que se quede en el cuadro final o inicial*/
+    animation-timing-function:cubic-bezier(.16,.79,1,0) ;
+    /* velocidad de la animacion a lo lardo de su duracion
+    ease-in(lento al inicio) | ease-out(lento al final)| ease-in-out(lento al inicio y al final)
+    cubic-bezier() -> puedo personalizar la velocidad utilizando este calculo. Para sacar dicho calculo https://cubic-bezier.com/
+    */
+   /*alternativa ->  animation: cambioColor 5s  2s 3 alternate forwards; */
+}
+.subtitulo:hover{
+    animation: ubicacion 4s ;
+
+}
+/* ------ seccion definicion  animaciones -------- */
+@keyframes cambioColor {
+    from{
+        color: blue;
+    }
+    to{
+        color: coral;
+        transform: rotate(180deg);
+    }
+    
+}
+
+@keyframes ubicacion {
+    from{
+        transform: translate(20px);
+    }
+    to{
+        transform: translate(10px) ;
+    }
+    
+} 
+
+@keyframes cambiosCubo {
+    0%{
+        background-color: blue;
+    }
+    5%{
+        /* border-radius: 50%; */
+        background-color: #f90;
+         transform:translate(100px) rotate(45deg)/* scale(1.5); */
+        
+    }
+    50%{
+        transform: translate(100px,150px);
+        background-color: rgb(251, 0, 255);
+    }
+    77%{
+        transform:translate(100px,150px) rotate(45deg);
+        border-radius: 10px;
+    }
+    100%{
+        background-color: crimson;
+        border-radius: 50%;
+    }
+}
+/* 
+
+animation: name duration timing-function delay iteration-count direction fill-mode; */
+.contenedor2{
+    border: 2px dashed green;
+    background-color: lightseagreen;
+    width: 100px;
+    height: 100px;
+    overflow: scroll;/* me crea una barra lateral para ocultar lo que sobresale y mostrarlo al hacer scroll gracias a la barra lateral*/
+}
+.padre{
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+    overflow:hidden;/* propiedad que me indica que hacer con el contenido que sobresale del padre*/
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 200%;
+    animation: moverSlide 5s alternate infinite;
+}
+li{
+    width: 200px;
+}
+
+img{
+    width:100%;
+}
+
+@keyframes moverSlide {
+    0%{
+        transform: translate(0);
+    }
+    40%{
+        transform: translate(0);
+    }
+    60%{
+        transform: translate(-200px);
+    }
+    100%{
+        transform:  translate(-200px);
+    }
+}

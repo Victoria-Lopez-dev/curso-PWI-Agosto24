@@ -1,0 +1,100 @@
+.padre{
+    background-color: coral;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    padding-bottom: 100px;
+}
+.cubo{
+    width: 200px;
+    height: 200px;
+    border: 2px solid blue;
+    background-color: cornflowerblue;
+    color: white;
+    font-size: 30px;
+}
+
+.translate{
+    background-color: blue;
+    transform: translateX(-100px);
+    /* translate(x,y) -> traslada al elemento 
+        translateY(y) -> traslado en sentido vertical:(+ ->abajo, - -> arriba)
+        translateX(x) -> traslada en sentido horizontal:(+ ->derecha, - -> izquierda)
+    
+    */
+        transition: transform 5s , background-color 1s ;
+
+}
+p:hover{
+    text-shadow: 2px 2px green;
+}
+
+.translate:hover{
+    transform: translateY(40px);
+    background-color: aqua;
+}
+
+.rotate{
+    transform: rotate(45deg);
+    background-color: yellowgreen;
+    /* 
+    unidades grados -> deg (degree)
+    + sentido horario (hacia la derecha)
+    - sentido antihorario (hacia la izquieda)
+    */
+}
+
+.rotate:active{
+    transform: rotate(225deg);
+    transition: all 3s;
+}
+
+.scale:hover{
+    transform: scaleX(0.5);
+    /* scale(x,y)  scaleX(x) scaleY(y) scale(unidad)-> escala en ambos sentidos (x e y ) 
+    numero sin unidad
+    */
+}
+
+.skew{
+    background-color: blueviolet;
+    transform: skew(20deg,45deg);
+    /*
+    unidades grados (deg)
+    skew(x,y) skewY(y) skewX(x)
+    */
+}
+
+.combo:active{
+    transform: rotate(40deg) scale(1.5);
+    transition: transform 5s;
+}
+/* pseudoclases -> "agregado" que nos permite modificar el CSS cuando el usuario se encuentre haciendo algunas acciones 
+
+selector:pseudoclase{
+    propieda:valor;
+    propieda:valor;
+}
+
+:hover -> cuando se pasa el mouse por encima del elemento
+:active -> mientras se pulsa sobre el elemento
+:checked -> cuando se marca un checkbox
+:focus -> cuando se hace foco en un elemento
+
+*/
+/*
+transition -> nos permite generar los cambios de estilos de manera progresiva con las pseudoclases 
+transition :propieda/es tiempo velocidad;
+
+si quiero agregar varias transiciones distintas en un mismo selector,puedo separarlas con una coma ; pero si quiero que todas se hagan en el mismo tiempo colocamos en vez de la propiedad el valor "all" 
+transition : propiedad duracion ,propiedad duracion;
+
+
+velocidad -> ease ease-in ease-out ease-in-out
+tiempo -> s (segundos) ms (milisegundos)
+
+si colocamos el transition en el selector hace los cambios de transicion en ambos sentidos (cuando se realiza la accion y cuando se deja de hacerla) .
+Si lo colocamos en la pseudoclase, solo se aplica mientra realizamos la accion
+
+*/
