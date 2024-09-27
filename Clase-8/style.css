@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    /* background: url(./assets/planta.jpg) cover no-repeat fixed 50%; */
+    background: url(./assets/planta.jpg);
+    background-size: cover;/* cover (ancho) contain (alto)*/
+    background-repeat: no-repeat;/* para que repita o no la imagen*/
+    background-attachment: fixed;/* para que la imagen me quede fija*/
+    background-position:50%;/*posicion de la imagen de fondo */
+ 
+
+    /* background:linear-gradient(-145deg,beige 0%,#F90 80%,rgb(200,11,33) 90%); */
+   /* background:radial-gradient(at top right,#6A9AB0 5%,beige 30%,darkblue);
+     at top(arriba) - bottom(abajo) left(izquierDA) - right(derecha)*/
+}
+nav{
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+    background-color: #6A9AB0;
+    color: white;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+}
+.hamb{
+    display: none;
+}
+#logo{
+    width: 70px;
+}
+ul{
+    display: flex;
+    list-style: none;
+    gap:40px
+}
+
+li:hover{
+    color: #001F3F;
+}
+main{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin: 100px 20px;
+    row-gap: 80px;
+}
+.tarjeta{
+    width: 300px;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+   gap: 10px;
+   box-shadow: 2px 2px 5px gray;
+   background-color: beige;
+   height: fit-content;
+}
+.tarjeta-img{
+    width: 100%;
+}
+.btn-mas{
+    padding: 20px;
+}
+
+footer{
+    background: linear-gradient(43deg, #f0beb9 11%, #d1def0 49%, #eaf0d1 100%);
+
+    padding: 50px 20px;
+    position: relative;
+}
+
+form{
+    position: absolute;
+    left: 100px;
+    bottom: 100px;
+    background-color: #FCDE70;
+    width: 400px;
+    padding: 40px;
+    border-radius: 10px;
+}
+footer>p{
+    color: white;
+}
+/*-------- media queries --------*/
+#checkbox{
+    display: none;
+}
+@media(max-width:800px) {
+    body{
+        background-color: orange;
+    }
+
+    nav{
+        color: #001F3F;
+        font-size: 1.5rem;
+        height: fit-content;
+    }
+    .hamb{
+        display: block;
+    }
+    .menu{
+        display: none;
+        width: 100%;
+        padding: 20px;
+        flex-direction: column;
+        align-items: end;
+    }
+
+    #checkbox:checked+.menu{
+        display: flex;
+    }
+}
+@media (max-width:690px){
+ main{
+    grid-template-columns: 1fr;
+    
+ }
+ #newsletter{
+    width: 100%;
+ }
+}
+
+/*
+media queries -> indicar que parte del diseño se modifiva al cambiar el ancho de pantalla 
+
+medidas promedio
+celulares -> 500px aprox >320px
+tablets -> 800px -900px
+
+compus portatiles-> 1200px - 1720px
+desktop -> 1920px
+
+max-width 
+*/
