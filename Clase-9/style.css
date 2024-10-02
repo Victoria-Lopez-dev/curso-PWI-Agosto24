@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&display=swap');
+
+h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h2{
+    font-family: "Edu AU VIC WA NT Guides", cursive;
+
+}
+section{
+    padding: 40px;
+    gap: 5px;
+}
+.tarjeta{
+    background-color: rgb(77, 123, 75);
+}
+#tarjeta1{
+        border-color: darkgreen!important;
+
+}
+footer{
+    background: linear-gradient(brown , pink);
+}
+.texto-footer{
+    background-color: #f90;
+}
+.card{
+    width: 18rem;
+    
+}
+.card-body{
+    color: red;
+}
+.boton1{
+    background-color: cadetblue;
+}
+.li1{
+    width: 77%;
+}
+
+button:hover{
+    background-color: burlywood!important;
+}
+/*
+jerarquia de CSS: 
+el selector mas e
+id>class>etiqueta
+con el important, no tiene en cuenta la jerarquia y prioriza el que se definid con el !important por sobre todo 
+
+Volvemos 21:25 y vemos
+modelo de caja : margin|padding
+m
+p
+t(top-arriba) b(bottom-abajo) s(start-izquierda) e(end-derecha)
+x(izquierda y derecha- eje x) -y(arriba y abajo - eje y)
+0-5
+
+tamaños -> w-100 |75|50|25 h-100 |75|50|25 vh-100 vw-100
+
+
+tipografia por defecto es Roboto
+
+componentes
+
+
+
+*/
