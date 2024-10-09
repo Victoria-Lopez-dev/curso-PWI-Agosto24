@@ -1,0 +1,63 @@
+:root{
+    --colorPrimario:rgb(105, 16, 6);
+    --distancia:20px;
+    --nombre:
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    background: linear-gradient(43deg, #f0beb999 11%, #d1def099 49%, #eaf0d199 100%);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: var(--colorPrimario);
+    margin: var( --distancia);
+}
+.uno{
+    background-image: url(./assets/img-1.jpg);
+    background-size: cover;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    padding: var( --distancia);
+}
+p{
+    background-color: var(--colorPrimario);
+    color: white;
+}
+
+
+.contenedor{
+    border: 2px solid black;
+    width: fit-content;/* el ancho del contenedor sea el ancho total de su contenido*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+.textos>p{
+    margin: 5px 0px;
+}
+
+.contenedor>img{
+    width: 200px;
+}
+
+/* min-width -> como minimo ese ancho (como minimo/piso) 
+max-width -> como maximo ese ancho(como maximo/techo)
+
+en los media queries 
+-> min-width (mobile first)
+
+ -> max-width (responsive)
+
+ para mas info:
+
+ https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio
+ https://developer.mozilla.org/en-US/docs/Web/CSS/place-items
+
+*/

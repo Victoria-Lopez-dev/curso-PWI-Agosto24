@@ -114,7 +114,7 @@ footer>p{
         display: flex;
     }
 }
-@media (max-width:690px){
+@media (max-width: 690px){
  main{
     grid-template-columns: 1fr;
     
