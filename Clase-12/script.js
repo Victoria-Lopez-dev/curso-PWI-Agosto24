@@ -105,7 +105,7 @@ console.log(5>=5)
 let usuarioIngresado="usuario1";
 let passwordIngresada="OTRApass";
 
-console.log(usuarioIngresado == "usuario1" && passwordIngresada ==="pass123")
+console.log(usuarioIngresado === "usuario1" && passwordIngresada ==="pass123")
 
 
 numero>40 && edadUsuario != 20 && usuarioIngresado == "usuario1"
