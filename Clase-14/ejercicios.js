@@ -173,3 +173,29 @@ if(promedio >=7){
 // if(promedio<4){
 //     console.log("Reprobado")
 // }
+
+
+///---------------
+
+/*
+4. Armar un programa que tome un numero ingresado e indique por consola si el mismo es par o impar. 
+*/
+
+//ingresar un numero -> prompt()
+//evaluar si es par o impar ->numero%2 == 0
+//mostrar esa informacion (par o impar) por consola 
+
+let numero = parseInt(prompt("Ingrese un numero"));//tomamos un valor ingresado y lo tranformamos a numero
+
+
+//console.log("el numero es par")
+//console.log(" el numero es impar")
+
+//resto -> % -> nos muestra el resto de la division. Toma el signo positivo o negativo que tenga el dividendo
+//es par el numero que es divisible por 2 ( que el resto es 0)
+
+
+numero%2 == 0 //veo el resto para ver si es par o impar
+
+numero%2 == 0 ?console.log("el numero es par") :console.log(" el numero es impar")
+
