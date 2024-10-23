@@ -4,6 +4,8 @@ let listaAlumnos=[];//creamos una variable global con un array vacio
 //conjunto de instrucciones 
 
 //definir (crear)
+//return -> le pedimos que nos retorne (devuelva ) algo (lo que le coloquemos a la derecha)
+//indica el fin de la funcion,corta la funcion, no ejecuta lo que venga despues
 
 //2 opciones 
 //tradicional
@@ -14,6 +16,7 @@ function nombreFuncion(parametros){
 } 
 
 */
+saludarDiego() 
 
 function saludar(nombre,apellido) {
     console.log("Holaa! "+nombre+" "+ apellido)//console.log("Holaa! "+ "Claudia")
@@ -47,14 +50,28 @@ function promedioDosNum(total) {
     console.log(total/2)
 }
 
-//return -> le pedimos que nos retorne (devuelva ) algo (lo que le coloquemos a la derecha)
-//indica el fin de la funcion,corta la funcion, no ejecuta lo que venga despues
+
 
 //funcion flecha - arrow function 
+/* sintaxis : (parametros)=>{
+        instrucciones
+    }
 
-// ejecucion 
+*/
+
+const sumaDeDosNumBis=(num1,num2)=>{
+    let suma =num1+num2;
+    return suma
+};
+
+const saludarADiego=()=>{
+    console.log("Holaa! Diego")
+};
+
+
+// ejecucion -> es la misma para cualquier definicion de funcion (tradicional o flecha)
 //sintaxis nombreFuncion()
-
+sumaDeDosNumBis(2,5)
 // saludar("Cristian","Sanchez")
 // saludar("Claudia"+30)
 // saludar(33)
@@ -71,6 +88,15 @@ promedioDosNum(respuesta[0])//promedioDosNum(suma)
 ///----- dato de color que retomamos mas adelante 
 let fecha = new Date
 fecha.getHours()
+
+
+/// detalle de orden - recomendado 
+
+//variables globales
+
+//definir las funciones
+
+//ejectuar las funciones 
 
 
 
