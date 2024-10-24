@@ -8,10 +8,10 @@ console.log("Hola "+nombre);
 // corchetes [] cada item los voy a separar con una coma (excepto el ultimo item)
 //podemos hacer lista con cualquier tipo de datos
 //no hay limite 
-let lista=[333,true,"hola"]
 //indice                0       1           2   3
 const nombresPersonas=["Marta",nombre,"Miriam","Luca"];
 const listaPrecios=[];
+let lista=[333,true,"hola",nombresPersonas]
 
 console.log(nombresPersonas)
 console.log("Hola "+nombresPersonas[2])
