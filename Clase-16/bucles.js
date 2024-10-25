@@ -196,3 +196,5 @@ console.log(resultado)
 let resultado2= ventasTotales.filter((venta)=> {return venta<3000})
 console.log(resultado2)
 
+//para la proxima clase : ejercitacion | objetos - DOM - Eventos
+
