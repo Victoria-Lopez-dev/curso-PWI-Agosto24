@@ -190,10 +190,11 @@ console.log(ventasChicas);
 
 //fin() -> nos trae el primer valor de la lista que comple con esa condicion
 
-let resultado = ventasTotales.find((venta)=> {return venta<3000})
+let resultado = ventasTotales.find((venta)=> {return venta<3000})//traer el primer item de la lista que sea menor a 3000
 console.log(resultado)
+let resultado2= ventasTotales.filter((venta)=> {return  venta<3000})//array con todos los items de la lista que sean menores a 3000
 
-let resultado2= ventasTotales.filter((venta)=> {return venta<3000})
+let resultado3= ventasTotales.filter((venta)=> {return 1000<venta && venta<3000})//array con todos los items de la lista que sean menores a 3000
 console.log(resultado2)
 
 //para la proxima clase : ejercitacion | objetos - DOM - Eventos
