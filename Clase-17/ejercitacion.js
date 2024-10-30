@@ -95,3 +95,42 @@ function buscarPais2() {
     console.log(paises)
 }
 
+/*
+Hacer una funcion que al ingresar el día de la semana y el estado del tiempo, (el cual puede ser lluvioso o despejado) nos devuelva:
+• Si es un sábado lluvioso, el mensaje "Me quedo en casa", 
+• Sino mostrar el mensaje "salgo a pasear".(Lunes-Martes-Miercoles-Ju-Vi -Dom lluvioso o despejado)
+(sabado despejado)*/
+
+//funcion
+//pedir dia de semana y estado del tiempo
+//evaluar y devolver  el mensaje"Me quedo en casa" o "Salgo a pasear"
+
+const evaluarClima=()=>{
+    let dia=prompt("Indique el dia de semana");
+    let tiempo=prompt("Indique si el tiempo es lluvioso o despejado");
+    dia === "Sabado" && tiempo === "lluvioso"? console.log("Me quedo en casa"):console.log("salgo a pasear")
+}
+
+//una alternativa
+
+const evaluarClima2=()=>{
+    let dia=prompt("Indique el dia de semana");
+    let tiempo=prompt("Indique si el tiempo es lluvioso o despejado");
+    // if(dia === "Sabado" && tiempo === "lluvioso"){
+    //     console.log("Me quedo en casa")
+    // }else{
+    //     console.log("salgo a pasear")
+    // }
+    if(dia === "Sabado"){
+        if(tiempo === "lluvioso"){
+            console.log("Me quedo en casa")
+        }else{
+            console.log("salgo a pasear")
+        }
+    }else{
+        console.log("salgo a pasear")
+    }
+    
+}
+// evaluarClima()
+
