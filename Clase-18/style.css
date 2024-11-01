@@ -2,3 +2,29 @@ h3{
     border: 2px solid black;
     padding: 30px;
 }
+
+.fondo-verde{
+    background-color: #33FF33;
+    padding: 20px;
+    border: 2px solid green;
+    
+}
+ul{
+    background-color: pink;
+    width: fit-content;
+    padding: 40px;
+    display: none;
+}
+.mostrar{
+    display: block;
+}
+.tarjeta{
+    width: 200px;
+    border: 2px dashed violet;
+    background-color: darkslategrey;
+    color: white;
+}
+.fondo-oscuro{
+    background-color: black;
+    color: white;
+}
