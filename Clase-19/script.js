@@ -1,110 +1,105 @@
-/* 
-Crear una variable con una nota ( que puede valer del 1 al 10) y por medio de un if/else devuelva:
-”Sobresaliente” si es entre 9 y10,
-“Notable” si es 8
-“Bien” si el valor es 7,
-”Suficiente” si es 6 ,
-”Insuficiente” si es entre 1 y 5.
+//DOM -> Document Object Model 
 
+//interfaz entre HTML y JS
+// elemento que traemos a Js -> nodo 
+//document -> documento HTML
+
+console.dir(document)
+
+//metodos : getElementsByClassName() -getElementsByTagName() -getElementById()
+//querySelector("selector") | querySelectorAll("selector") -> buscan al/los elemento/s por medio de su selector 
+// document.metodo()
+
+let tituloPrincipal=document.querySelector("h1");//nodo del h1
+//querySelector -> trae el primer nodo que cumple con ese selector
+
+console.dir(tituloPrincipal)
+console.log(tituloPrincipal.textContent)
+tituloPrincipal.textContent="Nuevo titulo"
+
+
+// let formulario=document.querySelector("form")
+
+// console.log(formulario.innerHTML)
+
+console.dir(document.querySelector("img"))
+//algunas propiedades de los nodos:
+//textContent - innerText -> el contenido de texto
+//innerHTML -> contenido html interno de la etiqueta
+//id -> conocer el id de la etiqueta
+//style -> objeto que me muestra las propiedades de CSS escritas en el atributo style de la etiqueta
+
+// si quiero manejar clases (atributo class):
+//classList -> add()-agregar clase/s remove() - sacar clase/s -toggle() alternar entre agregar/sacar clase/s
+
+//aria... -> corresponden a atributos de accesibilidad
+document.querySelector("h2").style.backgroundColor="#F90";
+document.querySelector("h2").classList.add("texto")
+tituloPrincipal.classList.add("claseA")
+
+//querySelectorAll() -> array con todos los nodos que tengan ese selector
+
+let subtitulos=document.querySelectorAll(".subt");
+console.log(subtitulos)
+subtitulos[2].style.color="red";
+
+
+//inputs -> propiedad -> "value"-> informacion sobre el contenido del input
+
+let input=document.querySelector("#contenido");
+//input.value="HOLAAA"
+console.dir(input)
+
+//eventos
+
+/*partes de un evento:
+
+- evento (accion a escuchar)-> lista de eventos: https://developer.mozilla.org/es/docs/Web/Events
+
+- elemento(nodo) en el que ocurre el evento 
+- accion/es a realizar como respuesta 
 */
+//2 alternativas
 
-//alternativa 1 -> let nota=parseInt(prompt("Ingrese nota : numeros enteros del 1 al 10"));
-//let nota=prompt("Ingrese nota : numeros enteros del 1 al 10")
+//todo de JS -> metodo addEventListener()
 
+/*
+    sintaxis :
+     nodo.addEventListener("evento",funcion con las acciones a realizar)
+    nodo.addEventListener("evento",()=>{accion/es a realizar })
+*/
+// let boton1=document.querySelectorAll("button")[0];//el primer boton del html
+let botones=document.querySelectorAll("button")
+let rojo=true;
 
-function calificacion(notaNumerica) {
- let numero=parseInt(notaNumerica);
-
-    if(isNaN(numero)){
-        return "Lo ingresado no es un numero"
-    }else{
-        if(numero>=9 && numero<=10 ){
-            return "Sobresaliente"
-        }else{
-            if(numero ==8){
-                return "Notable"
-            }
-            if(numero ==7){
-                return "Bien"
-            }
-            if(numero == 6){
-            return "Suficiente"
-            }
-            if(numero>10 || numero <1){
-                return "lo ingresado no se encuentra dentro del rango solicitado"
-               
-            }
-            return "Insuficiente"
-            
-        }        
-    }
-
+botones[0].addEventListener("click",()=>{
+    // if(rojo){
+    //     tituloPrincipal.style.color="rgb(0,255,0)"
+    // }else{
+    //     tituloPrincipal.style.color="red"
+    // }
+    // rojo=!rojo
+    tituloPrincipal.classList.toggle("colorVerde")
     
-}
+});
+let radio=document.querySelector("img");
+let contador=0
+radio.addEventListener("click",()=>{
+    contador++
+    console.log(contador)
+})
 
-//let resultado=calificacion(nota);
-//console.log(resultado)
+botones[1].addEventListener("click",()=>{
+    console.log(input.value)
+})
 
+//clase proxima: 
 /*
-Dada la siguiente lista de objetos :
-	Armar un array que contenga todos estos objetos.
-Programar una funcion donde permita reducir en el stock de dicho producto  en la cantidad que se informe como parámetro y lo sume a una lista de compra la cual muestre en el navegador.
-Agregar a dicha funcion que si el stock de alguno de los productos es 0 ( es decir stock=0) salte una alerta que indique “Nos quedamos sin stock de este producto
+algunos metodos mas del DOM 
+eventos: otros eventos - objeto event - this - preventDefault()
+
+POO
 */
 
-let pantalon={
-    nombreProd:"pantalon",
-    categoria:"indumentaria",
-    color:"azul",
-    stock:15
-}
-let campera={
-    nombreProd:"campera",
-    categoria:"indumentaria",
-    color:"verde",
-    stock:5
-}
-let zapatilla={
-    nombreProd:"zapatilla",
-    categoria:"indumentaria",
-    color:"negro",
-    stock:20
-}
-/*
-Agregar a dicha funcion que si el stock de alguno de los productos es 0 ( es decir stock=0) salte una alerta que indique “Nos quedamos sin stock de este producto
-*/
+//una parte en JS y otra HTML
 
-let productos=[pantalon,campera,zapatilla];
-let listaVenta=[];
-let resolucion=(cantidad,productoSeleccionado)=>{
-    //antes de descontar el stock, ver si tenemos stock para descontar
-
-    if(cantidad<=productoSeleccionado.stock || productoSeleccionado.stock !== 0){
-        productoSeleccionado.stock= productoSeleccionado.stock-cantidad;//modificamos el stock del producto
-        let prodVendido={
-                producto:productoSeleccionado.nombreProd,
-                unidades:cantidad
-            }
-        listaVenta.push(prodVendido)  
-        
-        
-        productoSeleccionado.stock !==0?console.log("nos queda en stock "+productoSeleccionado.stock +" unidades"): console.log("Nos quedamos sin stock de "+productoSeleccionado.nombreProd)
-
-
-    }else {if(productoSeleccionado.stock == 0){
-            alert("Nos quedamos sin stock de este producto")
-        }else{
-            alert("cantidad solicitada del producto mayor  que el de stock")
-        }
-        
-    }}
-
-// resolucion(20,pantalon);
-// resolucion(2,zapatilla);
-// resolucion(5,campera);
-
-// console.log(listaVenta)
-
-
-//brek 15min
-//a la vuelta: DOM - Eventos - POO(intro)
