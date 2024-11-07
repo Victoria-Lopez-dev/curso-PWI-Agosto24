@@ -1,0 +1,29 @@
+button{
+    background-color: brown;
+    padding: 10px;
+    color: white;
+}
+ul{
+    list-style: none;
+    background-color: orange;
+}
+nav{
+    background-color: beige;
+}
+section{
+    background-color: lightseagreen;
+}
+.tarjeta{
+    width: 200px;
+    border: 2px solid violet;
+    background-color: lightcoral;
+    color: darkslateblue;
+
+}
+.ocultar{
+    display: none;
+}
+main{
+    display: flex;
+    justify-content: space-between;
+}
