@@ -96,7 +96,7 @@ let nombre="juan"
 //1-elemento de escucha (en donde ocurre el evento )
 //2-la accion a escuchar (evento) ->https://developer.mozilla.org/es/docs/Web/Events
 
-//click - mouseover - change - input
+//click - mouseover - change - input - submit
 //3-funcion como respuesta al evento / accion a realizar cunado se ejecute el evento
 
 
