@@ -1,0 +1,9 @@
+[{
+    "producto":"remera",
+    "precio":20000,
+    "stock":20
+},{
+    "producto":"pantalon",
+    "precio":30000,
+    "stock":22
+}]
