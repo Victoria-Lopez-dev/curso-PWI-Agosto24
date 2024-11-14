@@ -1,0 +1,15 @@
+{
+  "name": "clase-22",
+  "version": "1.0.0",
+  "description": "primer proyecto con node.js",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "dependencies": {
+    "validator": "^13.12.0"
+  }
+}
