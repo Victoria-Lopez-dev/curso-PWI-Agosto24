@@ -1,6 +1,6 @@
 ## REACT
-
-# 1 manera -> comando npx create-react-app nombre-proyecto
+# dos maneras para crear una plantilla de un proyecto en React
+# 1ra manera -> comando npx create-react-app nombre-proyecto
 
 va a crearme una plantilla del proyecto base 
 para correrlo -> npm run start 
@@ -16,8 +16,24 @@ npm install -> va a la lista de dependencias que esta en el package.json y las i
 
 ## Dentro de la plantilla creada por create-react-app
 - carpeta "public" -> contiene todos los archivos estaticos del sitio : imagenes , index.html
-- gitignore
-- package.json
+- gitignore -> archivos/carpetas a ignorar al cargar con git
+- package.json _> "lista" con info y dependencias del sitio
 - package-lock.json
-- README
-- carpeta "src" -> componentes 
+- README -> documento "block de notas" con info sobre el funcionamiento del sitio
+
+- carpeta "src" -> componentes - documentos dinamicos
+
+
+# 2 manera -> vite -> npm create vite@latest nombre- proyecto -- --template react
+va a crearme una plantilla del proyecto base 
+ en vez de correr con : npm run start usa el comando npm run dev
+ 1- npm create vite@latest nombre- proyecto -- --template react
+ 2- entro en la terminal dentro del proyecto creado 
+ 3 -ejecuto npm install
+ 4- npm run dev para reproducir
+
+
+ ## IMPORTANTE
+
+el sitio se va a reproducir siempre que este corriendo el programa (ya sea con npm run dev o npm run start )
+cuando ya no quiero reproducirlo mas, en la terminal pulso las teclas control+C (corta la ejecucion )
