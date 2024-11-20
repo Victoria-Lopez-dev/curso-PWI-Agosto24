@@ -1,0 +1,10 @@
+h2{
+    color: blue;
+    background-color: greenyellow;
+}
+.menu{
+    display: flex;
+    gap: 20px;
+    background-color: lightblue;
+    list-style: none;
+}
