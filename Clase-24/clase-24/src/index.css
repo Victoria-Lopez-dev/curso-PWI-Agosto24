@@ -1,0 +1,14 @@
+*{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h2{
+  background-color: pink;
+  color: blue;
+  font-size: 3rem;
+}
+
+.botones{
+  padding: 10px;
+  background-color: cadetblue;
+  border-color: darkcyan;
+}
