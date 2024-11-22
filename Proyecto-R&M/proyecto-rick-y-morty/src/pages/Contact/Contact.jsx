@@ -1,12 +1,11 @@
 import Navegation from '../../components/Navegation/Navegation'
 
-
-export default function Characters() {
+export default function Contact() {
     return(
         <div>
-            <Navegation/>
-            <h1>Characters..</h1>        
+        <Navegation/>
+            <h1>Contact..</h1>
         </div>
-
+        
     )
 }

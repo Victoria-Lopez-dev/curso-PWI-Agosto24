@@ -1,6 +1,6 @@
 import './style.css'
 
-export default function Componente({titulo,info}) {
+export default function Componente1({titulo,info}) {
    //codigo JS.... props.titulo
 
     return(

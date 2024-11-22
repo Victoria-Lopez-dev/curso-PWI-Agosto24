@@ -1,6 +1,8 @@
-import Componente from "../component/Componente1"//llamamos a un document jsx podemos obviar indicar la extension ".jsx"
-import Componente2 from "../component/Componente2"
-import '../index.css'
+import Componente1 from "../component/Componente1";//llamamos a un document jsx podemos obviar indicar la extension ".jsx"
+import Componente2 from "../component/Componente2";
+import Saludo from "../component/Saludo";
+
+import '../index.css';
 
 export default function Home() {
     
@@ -12,12 +14,11 @@ export default function Home() {
     return(
         <div>
             <h1 style={{color:"red"}}>Clase 24</h1>
-            <Componente titulo="Un titulo" info={producto}/>
-            <Componente titulo="Subtitulo" info={producto}/>
+            <Saludo/>
+            <Componente1 titulo="Un titulo" info={producto}/>
+            <Componente1 titulo="Subtitulo" info={producto}/>
            <Componente2/>
-         
 
-            
         </div>
     )
     

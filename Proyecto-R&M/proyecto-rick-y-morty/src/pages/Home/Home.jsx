@@ -1,4 +1,8 @@
+import ButtonsHome from '../../components/ButtonsHome/ButtonsHome'
+
 import './home.css'
+
+
 export default function Home() {
     return(
         <div className='d-flex justy-content-center align-items-center mt-4'>
@@ -13,8 +17,8 @@ export default function Home() {
                     </p>     
                     <p className='row'>Lets go!</p> 
                     <div className='row'>
-                        <button className='col-4'>Characters</button>
-                        <button className='col-4'>Contact</button>            
+                        <ButtonsHome contenido="Characters"/>
+                        <ButtonsHome contenido="Contact"/>           
                     </div>
 
                 </div>        
