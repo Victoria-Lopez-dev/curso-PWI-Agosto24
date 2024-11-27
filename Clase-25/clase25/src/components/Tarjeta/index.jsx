@@ -8,6 +8,7 @@ export default function Tarjeta({persona}) {
             <ul>
                 <li>{persona.edad}</li>
                 <li>{persona.correo}</li>
+                <li>dni nro: {persona.dni}</li>
             </ul>
         </div>
     )

@@ -1,19 +1,24 @@
 import Tarjeta from "../components/Tarjeta"
 
 export default function Lista() {
-    let arrayAlumnos=[{nombre:"Ana",
+    let arrayAlumnos=[{
+        dni:"11111111",
+        nombre:"Belen",
         edad:22,
         correo:"ejemplo@email.com"
     },
-       {nombre: "Marcos",
+       {dni:"2222222",
+        nombre: "Marcos",
         edad:33,
         correo:"marcos@email.com"
        },
-       {nombre: "Luis",
+       {dni:"333333",
+        nombre: "Jose",
         edad:44,
-        correo:"luis@email.com"
+        correo:"Jose@email.com"
        },
-       {nombre: "Julia",
+       {dni:"444444",
+        nombre: "Julia",
         edad:55,
         correo:"julia@email.com"
        }]
@@ -29,7 +34,7 @@ export default function Lista() {
             // </ul>
             }
             { arrayAlumnos.map((alumno)=>{//alumno ahora es un objeto
-                    return <Tarjeta persona={alumno}/>//le paso al componente "Tarjeta" la prop "persona " que tiene el objeto de cada alumno
+                    return <Tarjeta key={alumno.dni} persona={alumno}/>//le paso al componente "Tarjeta" la prop "persona " que tiene el objeto de cada alumno
                 })
             }
             
@@ -38,3 +43,5 @@ export default function Lista() {
     )
 }
 // array.map((ref)=>{return ....})
+
+//key props -> prop particular de React que necesita para su buen funcionamiento al crear componentes/estructuras a partir de una lista

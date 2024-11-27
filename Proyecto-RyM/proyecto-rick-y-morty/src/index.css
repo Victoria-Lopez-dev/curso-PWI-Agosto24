@@ -1,6 +1,7 @@
 body{
   background-image: url(./rickymorty.jpg);
   background-size: cover;
+  height: 100vh;
 }
 h1{
   color: white;
