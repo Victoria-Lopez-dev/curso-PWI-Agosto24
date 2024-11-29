@@ -1,35 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import Nav from './component/Nav'
+import Seccion from './component/Seccion'
+import  Componente  from './component/Componente'
+import  Formulario  from './component/Formulario'
+
+import { Fragment,useState } from 'react'
+// import  React  from 'react' -> <React.Fragment>
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+    const[ocultar,setOcultar]=useState(false)
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <Fragment  >
+      <Nav/>
+      <h1 className="text-success"> Clase 26</h1>
+      <Seccion/>
+
+      <button onClick={()=> setOcultar(!ocultar)}>
+      {ocultar? "Ocultar":"Mostrar"}
+      </button>
+      
+      <section>
+      {ocultar?<Componente/>:''}
+          
+      </section>
+
+     <Formulario/>
+    </Fragment>
   )
 }
 
 export default App
+//Fragment -> reemplazar los <div> que usamos para que no tire error el componente 
+// Fragment -> no se debe pasar ni props ni clases 
+//Fragment || <> </> || React.Fragment ( importando React )
+
+//+ -* / ><>= == ==!= && || !

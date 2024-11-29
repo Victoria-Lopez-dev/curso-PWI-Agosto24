@@ -1,10 +1,13 @@
-import { useState } from 'react'
+import { useState ,useEffect} from 'react'
 
 import Navegation from '../../components/Navegation/Navegation'
 import Card from '../../components/Card/Card'
+import Filter from '../../components/Filter/Filter'
 
 export default function Characters() {
     let [data,setData]=useState([])//crea un estado llamado data que de manera inicial es un array vacio
+
+    let filterName=["Character Alive","Character Dead","Female","Male","Origin Unknown"]
 
     const mostrarData=async()=>{
         //traigo la informacion de los personajes de Rick&Morty de la API 
@@ -18,11 +21,41 @@ export default function Characters() {
      
      }
 
+    const filtrar=(inputData)=>{
+       // console.dir(inputData)me muestre por consola la informacion del input que se pulso
+
+    // console.log("checkbox activo? "+inputData.checked)
+    // console.log(inputData.value)
+
+    if(inputData.value === "Female" ){
+        let infoFiltrada =data.filter((personaje)=>{return personaje.gender === "Female"});
+        setData(infoFiltrada)//modifique el estado data para que ahora solamente tenga a aquellos de gender Female
+    }
+    if(inputData.value === "Male" ){
+        let infoFiltrada =data.filter((personaje)=>{return personaje.gender === "Male"});
+        setData(infoFiltrada)//modifique el estado data para que ahora solamente tenga a aquellos de gender Female
+    }
+            
+    }
+
+     useEffect(()=>{
+        mostrarData();
+     },[])//lo ponemos con [] para que lo ejecute una ve renderizado el componente
+
     return(
         <div>
             <Navegation/>
-            <h1>Characters..</h1>  
-            <button onClick={mostrarData}>Mostrar Info</button>
+            <h2 className='text-white'>Filters</h2>
+
+            <form className='row gap-2'>
+                {
+                    filterName.map((filter)=>{
+                        return  <Filter key={filter} title={filter} filtar={filtrar}/>
+                    })
+                }
+               
+               
+            </form>
             <section className='d-flex gap-2 flex-wrap'>
             {
                 data.map((personaje)=>{
@@ -41,3 +74,6 @@ export default function Characters() {
 //op.ternario -> sintaxis condicion? accion-true :accion-false
 
 //Fragment
+
+//proxima clase : repaso Formulario del proyecto + implementar useEffect en los filtros 
+//react router - redux
