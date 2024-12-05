@@ -28,7 +28,9 @@ function App() {
     id:"6",
     nombre:'Daiana Gutierrez',
     curso:'HTML y CSS'
-  }])
+  }]);
+
+ 
 
   return (
     <>
