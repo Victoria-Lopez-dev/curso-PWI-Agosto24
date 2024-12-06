@@ -1,6 +1,9 @@
+import { alumnosContext } from "../../context";
+import { useContext } from "react";
 
 export default function Intro() {
     let cursos=["HTML y CSS","Bootstrap","JavaScript"]
+    let[alumnos,nuevoAlumno]=useContext(alumnosContext)
 
     return(
         <>
@@ -13,9 +16,12 @@ export default function Intro() {
         <h2>Cantidad de alumnos : </h2>
         <p>Ellos son:</p>
             <ul>
-            <li>nombre alumno</li>
+                {alumnos.map((alumno)=>{
+                    return <li key={alumno.id}>{alumno.nombre}</li>
+                })}
+            
             </ul>
-        <button className="btn p-3 bg-primary text-light">Agregar nuevo Alumno</button>
+        <button className="btn p-3 bg-primary text-light" onClick={()=>nuevoAlumno([...alumnos,{id:'88',nombre:"nuevo alumno",curso:"Bootstrap"}])}>Agregar nuevo Alumno</button>
         </>
     )
 }
