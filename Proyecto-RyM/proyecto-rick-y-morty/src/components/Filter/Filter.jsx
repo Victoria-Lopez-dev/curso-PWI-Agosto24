@@ -7,3 +7,7 @@ export default function Filter({title,filtar}){
         </div>
     )
 }
+
+//<label for="mismo">Referencia..</label>
+//<input id="mismo"/>
+//event.target -> contiene la informacion del nodo(elemento) en el que ocurrio el evento (en este caso nos trae informacion del inputo en donde se hizo "click")

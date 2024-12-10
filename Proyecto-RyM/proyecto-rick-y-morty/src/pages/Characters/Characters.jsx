@@ -22,21 +22,49 @@ export default function Characters() {
      }
 
     const filtrar=(inputData)=>{
-       // console.dir(inputData)me muestre por consola la informacion del input que se pulso
 
-    // console.log("checkbox activo? "+inputData.checked)
-    // console.log(inputData.value)
+        //del inputData necesitamos la informacion de "checked" y "value"
+        let pulsado=inputData.checked;//booleano
 
-    if(inputData.value === "Female" ){
-        let infoFiltrada =data.filter((personaje)=>{return personaje.gender === "Female"});
-        setData(infoFiltrada)//modifique el estado data para que ahora solamente tenga a aquellos de gender Female
-    }
-    if(inputData.value === "Male" ){
-        let infoFiltrada =data.filter((personaje)=>{return personaje.gender === "Male"});
-        setData(infoFiltrada)//modifique el estado data para que ahora solamente tenga a aquellos de gender Female
-    }
+        let filtroPulsado=inputData.value;
+        console.log(pulsado)
+        console.log(filtroPulsado)
+
+
+        //si esta pulsado aplicar el filtro
+        if(pulsado){
+            console.log(data);
+            let nuevaLista;
+
+            switch (filtroPulsado) {
+                case "Character Alive":
+                    nuevaLista=data.filter((personaje)=>{return personaje.status === "Alive"})
+                    break;
+
+                case "Character Dead":
+                    nuevaLista=data.filter((personaje)=>{return personaje.status === "Dead" })
+                    break;
+
+                case "Female":
+                    nuevaLista=data.filter((personaje)=>{return personaje.gender ===  "Female"})
+                    break;
+
+                case "Male":
+                    nuevaLista=data.filter((personaje)=>{return personaje.gender ===  "Male" })
+                    break;
+
+                case "Origin Unknown":
+                    nuevaLista=data.filter((personaje)=>{return personaje.origin.name == "unknown" })
+                    break;
+                                  
+            }
+           setData(nuevaLista)//cambiando el estado por medio de su setter 
+           
+        }
     
     }
+
+  
      useEffect(()=>{
         mostrarData();
      },[])//lo ponemos con [] para que lo ejecute una ve renderizado el componente
@@ -54,14 +82,17 @@ export default function Characters() {
                         return  <Filter key={filter} title={filter} filtar={filtrar}/>
                     })
                 }  
-               
-               
             </form>
             <section className='d-flex gap-2 flex-wrap'>
             {
+                //data.length-> la cantidad de personajes que tengo(largo del array data)
+                data.length !== 0?
                 data.map((personaje)=>{
                     return <Card key={personaje.id} personaje={personaje}/>
                 })
+                :
+                <p className='alert bg-success'>
+                <i className="bi bi-exclamation-triangle-fill pe-2"></i>Sorry! There are no characters width all those properties.</p>
             }
                 
             </section>      
@@ -75,3 +106,11 @@ export default function Characters() {
 //op.ternario -> sintaxis condicion? accion-true :accion-false
 
 //Fragment
+
+//operador ternario : condicion? accion-true :accion-false
+
+
+//vamos a armar un contexto -> buscar la info a la API 1 sola vez(evitando que se llame a la api cada vez que se reproduce "Characters") y a crear un estado con la info completa 
+//esa info completa la vamos a usar para "volver a atras" cuando se desmarque un checkbox
+
+//BReak!! volvemos 21hs
