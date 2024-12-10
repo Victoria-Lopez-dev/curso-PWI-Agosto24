@@ -6,7 +6,6 @@ import Filter from '../../components/Filter/Filter'
 
 export default function Characters() {
     let [data,setData]=useState([])//crea un estado llamado data que de manera inicial es un array vacio
-    const[estado,setEstado]=useState(true)
 
     let filterName=["Character Alive","Character Dead","Female","Male","Origin Unknown"]
 
@@ -36,16 +35,13 @@ export default function Characters() {
         let infoFiltrada =data.filter((personaje)=>{return personaje.gender === "Male"});
         setData(infoFiltrada)//modifique el estado data para que ahora solamente tenga a aquellos de gender Female
     }
-    setTimeout(()=>{ setEstado(false)},3000)
+    
     }
-
      useEffect(()=>{
         mostrarData();
      },[])//lo ponemos con [] para que lo ejecute una ve renderizado el componente
 
-     useEffect(()=>{
-        console.log("se ejecuta esta funcion cada vez que hay un cambio en estado")
-     },[estado])
+
 
     return(
         <div>
@@ -79,6 +75,3 @@ export default function Characters() {
 //op.ternario -> sintaxis condicion? accion-true :accion-false
 
 //Fragment
-
-//proxima clase : repaso Formulario del proyecto + implementar useEffect en los filtros 
-//react router - redux
