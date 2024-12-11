@@ -1,4 +1,5 @@
-import { useState ,useEffect} from 'react'
+import { useState ,useEffect,useContext} from 'react';//traemos el metodo useContext para poder traerme el contexto de characters(toda la data que me dio la)
+import {charactersContext}  from '../../context';
 
 import Navegation from '../../components/Navegation/Navegation'
 import Card from '../../components/Card/Card'
@@ -6,6 +7,8 @@ import Filter from '../../components/Filter/Filter'
 
 export default function Characters() {
     let [data,setData]=useState([])//crea un estado llamado data que de manera inicial es un array vacio
+
+    let[dataCompleta,setDataCompleta]=useState([])
 
     let filterName=["Character Alive","Character Dead","Female","Male","Origin Unknown"]
 
@@ -15,9 +18,8 @@ export default function Characters() {
          .then((resp)=>{return resp.json()})
          .catch((error)=>console.log("error:" +error));
      
-      // console.log(infoAPI.results)Esta API me mando la informacion dentro de una propiedad que llamo "result"
-         setData(infoAPI.results)//cambiar el estado data por la informacion que me trae la API , es decir que pasa de un array vacio , a un array que contiene  a los personajes de Rick&Morty
-          
+         setDataCompleta(infoAPI.results);//la info completa
+         setData(infoAPI.results)//arranque con la info completa y luego se empiece a filtrar
      
      }
 
@@ -60,14 +62,16 @@ export default function Characters() {
             }
            setData(nuevaLista)//cambiando el estado por medio de su setter 
            
+        }else{
+            setData(dataCompleta)
         }
     
     }
 
   
      useEffect(()=>{
-        mostrarData();
-     },[])//lo ponemos con [] para que lo ejecute una ve renderizado el componente
+        mostrarData()
+     },[])
 
 
 
