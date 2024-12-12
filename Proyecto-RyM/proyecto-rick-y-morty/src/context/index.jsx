@@ -1,4 +1,4 @@
-import { createContext,useState} from "react";
+import { createContext,useState,useEffect} from "react";
 
 
 //creamos el contexto
@@ -21,7 +21,10 @@ export default function CharactersProvider({children}) {
           
      
      }
-     mostrarData();
+     useEffect(()=>{
+       mostrarData();  
+     },[])
+    
 
      return(
         <charactersContext.Provider value={character}>
