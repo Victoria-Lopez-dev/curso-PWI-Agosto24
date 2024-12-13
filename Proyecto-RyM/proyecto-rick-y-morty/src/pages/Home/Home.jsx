@@ -7,7 +7,7 @@ export default function Home() {
     return(
         <div className='d-flex justy-content-center align-items-center mt-4'>
             <div className='container fondo-blanco p-5'>
-                    <h1 className="titulo row">Proyect Rick & Morty</h1>
+                    <h1 className=" row">Proyect Rick & Morty</h1>
                     <h2 className='row'>Welcome to Rick & Morty Proyect!</h2>  
                     <p className='row'>This proyect was made for practising React and to made a functional website. </p> 
 

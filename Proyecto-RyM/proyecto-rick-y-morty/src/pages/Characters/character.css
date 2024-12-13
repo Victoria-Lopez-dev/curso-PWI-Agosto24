@@ -1,0 +1,19 @@
+.subt-1{
+    display: none;
+}
+.form{
+    display: none;
+}
+@media(min-width:720px){
+    .mobile-filters{
+        display: none!important;
+    
+    }
+    .subt-1{
+        display: block;
+    }
+    .form{
+        display: flex;
+    }
+
+}

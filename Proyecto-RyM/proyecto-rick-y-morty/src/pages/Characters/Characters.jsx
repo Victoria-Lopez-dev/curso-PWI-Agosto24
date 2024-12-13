@@ -1,6 +1,8 @@
 import { useState ,useEffect,useContext} from 'react';//traemos el metodo useContext para poder traerme el contexto de characters(toda la data que me dio la)
 //import {charactersContext}  from '../../context';
 
+import './character.css'
+
 import Navegation from '../../components/Navegation/Navegation'
 import Card from '../../components/Card/Card'
 import Filter from '../../components/Filter/Filter'
@@ -9,6 +11,7 @@ export default function Characters() {
     let [data,setData]=useState([])//crea un estado llamado data que de manera inicial es un array vacio
     let[dataCompleta,setDataCompleta]=useState([])
     let [filtrosAplicados,setFiltrosAplicados]=useState([])
+    let[show,setShow]=useState(true)
     
     //alternativa para quien quiera usar Context en vez de "dataCompleta"
    // let character=useContext(charactersContext)//me traigo el estado creado en el contexto
@@ -98,15 +101,23 @@ export default function Characters() {
     return(
         <div>
             <Navegation/>
-            <h2 className='text-white'>Filters</h2>
+          
+            <h2 className='text-white subt-1'>Filters</h2>
+            
+            <div className='mobile-filters bg-success d-flex gap-3 my-3' onClick={()=>{setShow(!show)}}>
+                <h2 className='text-white'>Filters</h2>
+                <p>Icono</p>
+            </div>
+          
+                <form className={show? 'form row gap-2':'row gap-2'}>
+                    {
+                        filterName.map((filter)=>{
+                            return  <Filter key={filter} title={filter} filtar={filtrar}/>
+                        })
+                    }  
+                </form>          
+        
 
-            <form className='row gap-2'>
-                {
-                    filterName.map((filter)=>{
-                        return  <Filter key={filter} title={filter} filtar={filtrar}/>
-                    })
-                }  
-            </form>
             <section className='d-flex gap-2 flex-wrap'>
             {
                 //data.length-> la cantidad de personajes que tengo(largo del array data)
