@@ -3,7 +3,7 @@ import Navegation from '../../components/Navegation/Navegation'
 export default function Contact() {
     return(
         <div>
-        <Navegation/>
+        <Navegation pageName={"Contact"}/>
             <div className='bg-primary d-flex flex-column'>
                 <h1>Contact</h1>
                     <p>Leave us your information so we can contact you</p>

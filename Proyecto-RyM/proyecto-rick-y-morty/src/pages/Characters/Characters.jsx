@@ -100,7 +100,7 @@ export default function Characters() {
 
     return(
         <div>
-            <Navegation/>
+            <Navegation pageName={"Characters"}/>
           
             <h2 className='text-white subt-1'>Filters</h2>
             
