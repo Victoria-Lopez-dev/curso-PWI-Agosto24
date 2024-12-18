@@ -21,12 +21,12 @@ export default function Characters() {
 
     const mostrarData=async()=>{
         //traigo la informacion de los personajes de Rick&Morty de la API 
-       let infoAPI= await fetch("https://rickandmortyapi.com/api/character")
+       let infoAPI= await fetch("https://rickandmortyapi.com/api/character/?page=1")
          .then((resp)=>{return resp.json()})
          .catch((error)=>console.log("error:" +error));
      
-         setDataCompleta(infoAPI.results);//la info completa
-         setData(infoAPI.results)//arranque con la info completa y luego se empiece a filtrar
+         setDataCompleta([...dataCompleta,...infoAPI.results]);//la info completa
+         setData([...data,...infoAPI.results])//arranque con la info completa y luego se empiece a filtrar
      
      }
 
@@ -86,6 +86,7 @@ export default function Characters() {
     //sin usar el contexto
      useEffect(()=>{
         mostrarData()
+     
         
      },[])
     
